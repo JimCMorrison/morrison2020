@@ -1,12 +1,15 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Gatsby Starter Personal Blog`,
-    author: `Gatsby`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Jim Morrison`,
+    author: `Jim Morrison`,
+    description: `Jim Morrison's portfolio + blog`,
+    siteUrl: `https://www.jimcmorrison.com/`,
     social: {
-      twitter: `gatsbyjs`,
+      twitter: `codingmorrison`,
+      instagram: `https://www.instagram.com/codingmorrison/`,
+      youtube: `https://www.youtube.com/channel/UC8sGJUv6TSvYQvRHIj74PZg`,
+      linkedin: `https://www.linkedin.com/in/jimcmorrison/`,
     },
   },
   plugins: [
@@ -64,8 +67,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: "G-CGJY0QQR9K",
       },
     },
     {

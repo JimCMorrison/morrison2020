@@ -1,0 +1,70 @@
+---
+title: Hey Devs, Let’s Build A Simple React Clock
+date: "2017-10-22"
+description: Nothing is better than a quick programming trinket that tosses away the traditional “Hello World” tutorial. So let’s take 3 minutes and build a Clock that tells us our local time through React!
+
+---
+
+**This has been ported over from the [2017 Medium article which can be found here](https://medium.com/@CodingMorrison/hey-devs-lets-build-a-simple-react-clock-36365da0a561)**
+
+Nothing is better than a quick programming trinket that tosses away the traditional “Hello World” tutorial. So let’s take 3 minutes and build a Clock that tells us our local time through React!
+
+https://miro.medium.com/max/1400/1*yVJclWF4NQxsvKNRDAF53g.png
+
+To get things started open your favorite browser and head over to Codepen.io’s website. Next, select the Create button at the top right Navbar followed by “New Pen”.
+
+CodePen is a great resource for a quick hack and slash session, sharing some front end code, and design. Once you complete this React sample, make sure you take some time to poke around their site and check out the vast user created content there!
+
+https://miro.medium.com/max/1400/1*2gewH0p6wJfxeXZCwY278w.png
+
+When you land in your CodePen we will need to setup our environment to handle our React sample. We can do this by selecting Settings followed by the JavaScript tab. It’s in this view as seen from above where we will modify the JavaScript Preprocessor for Babel. Then we need to select the Quick Add dropdown twice and choose once for React and another time for React DOM. These settings are automatically saved once chosen.
+
+https://miro.medium.com/max/796/1*KJ6H5JRawnwzh28Pb3ZOuQ.png
+
+Now that our environment is setup lets select the HTML field and put in a div with an id of “root”.
+
+This will allow our JavaScript to feed off the id to pass along the data.
+
+https://miro.medium.com/max/828/1*PePPT-EBUFWj5Z2kkJ1F-Q.png
+
+Next let’s drop down to our JavaScript pane and create a function called “clock”. This function will allow us to set the logic that will be the driving force behind the code sample.
+
+https://miro.medium.com/max/832/1*8Gdb-TBkSMbIk7AZ0KGF7g.png
+
+Then we are going to define a const variable called “tick” and nest a div tag inside of it. We will end up calling this const and render it’s contents to the screen.
+
+https://miro.medium.com/max/1178/1*GZVjU3PBOTnbH3RnbONetA.png
+
+Within our recently created div tag lets place a h1 tag with the phrase “React Clock” in between the h1 opening and closing tags. We will drop down a line after that and create a h2 tag.
+
+It’s within the brackets of the h2 tag that we will add the text “Time: ” and then create a set of curly braces to utilize our JavaScript code within our view.
+
+Between the curly braces add new Data().toLocaleTimeString()
+
+If we break down what the JavaScript is doing we can see we are using a new Date() object followed by a toLocaleTimeString() method.
+
+As Mozilla Developer Network states, Date() is a single instance in time broke down in to a number of milliseconds. Where as toLocaleTimeString() brings back a string that’s formatted of the time portion of this date.
+
+https://miro.medium.com/max/1400/1*gLRrM4My3CSQpKHFNIGMew.png
+
+Next outside of our closing parentheses, on a new line we will use ReactDOM.render() which allows us to render a React element inside of the DOM. The DOM stands for “Document Object Model” which is a interface for HTML and XML documents that can altered by it’s structure, style, and contents.
+
+https://miro.medium.com/max/1384/1*xbiqa5zdl1alW46nGdKAbw.png
+
+Inside of our parentheses on a new line, lets place our const variable of “tick” followed by a trailing comma.
+
+On the line beneath it we will place document.getElementById(‘root’)
+
+Here we call document as it is on the forefront of any webpage and the page’s content.
+
+Then we latch on .getElementById(‘root’) as it gives us the ability to target an element by it’s ID. In this example we declared “Root” as the ID in the initial commit to our HTML’s div element.
+
+https://miro.medium.com/max/1176/1*1ZRTZTZYgc3ayjvb7b9-AQ.png
+
+Now at the bottom of our page we will add a new line outside of our final curly brace and add setInterval(clock, 1000)
+
+We are using the setInterval method which gives us the ability to repeatedly call our clock function(the first param) every 1000 milliseconds(our second param). Every 1000 milliseconds is 1 second which allows us to keep our clock accurate.
+
+https://miro.medium.com/max/1400/1*SGSyDuqzKXxCOPKOeG5c0g.png
+
+After a quick save of our code pen, we should see success on the screen by a ticking clock! Congratulations on your first React clock!

@@ -34,8 +34,7 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong>, a framework built upon the
-              React library.
+              I'm still porting over old content I've produced, thanks for your patience! Keep your eyes peeled for my latest works and let's collaborate together!
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 Follow me on Twitter
