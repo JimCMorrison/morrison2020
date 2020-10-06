@@ -20,6 +20,12 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
+    `gatsby-remark-embed-youtube`,
+    `gatsby-remark-responsive-iframe`,
+    `gatsby-transformer-remark`,
+    `gatsby-remark-embed-video`,
+    `gatsby-remark-responsive-iframe`,
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -81,6 +87,30 @@ module.exports = {
         display: `minimal-ui`,
         // edit below
         icon: `content/assets/gatsby-icon.png`,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+        {
+          resolve: "gatsby-remark-embed-youtube",
+          options: {
+            width: 800,
+            height: 400
+          },
+        },
+        {
+          resolve: "gatsby-remark-embed-video",
+          options: {
+            width: 800,
+            ratio: 1.77,
+            height: 400,
+            related: false, 
+            noIframeBorder: true,
+          }
+        }
+        ]
       },
     },
     {
