@@ -24,9 +24,8 @@ class IndexPage extends React.Component {
         </h1>
         <b>My name is Jim Morrison</b>
         <p>
-        I'm a community focused developer documenting the wild world of authentication, 
-        Javascript, Flutter, and anything interesting along the way!
-        </p>
+        I am a product focused, community passionate, organized driven developer 
+        who loves to learn and grow. Let's level up together!</p>
         <Link to="/blog/">
           <Button marginTop="35px">Go to Blog</Button>
         </Link>
